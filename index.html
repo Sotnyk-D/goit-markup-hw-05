@@ -54,9 +54,21 @@
       <!-- Hero -->
       <section class="hero section container">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="button">
-          <span class="text-button">Замовити послугу</span>
-        </button>
+        <button class="button" data-modal-open>Замовити послугу</button>
+        <div class="backdrop-hero is-hidden" data-modal>
+          <div class="modal-hero">
+            <button class="clouse-modal" data-modal-close>
+              <svg>
+                <use
+                  class="icon-close"
+                  href="./imeges/symbol-defs.svg#icon-close-black"
+                  width="18px"
+                  height="18px"
+                ></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
       <!-- Feature -->
       <section class="section">
@@ -109,26 +121,35 @@
         <div class="container">
           <h2 class="works-title">Чим ми займаємося</h2>
           <ul class="list example">
-            <li class="item">
-              <img
-                src="./imeges/keydoard.jpg"
-                alt="Написання коду"
-                width="370"
-              />
+            <li class="item item-desktop">
+              <div class="imeges-thumb">
+                <img
+                  src="./imeges/keydoard.jpg"
+                  alt="Десктопні додатки"
+                  width="370"
+                />
+                <div class="images-text img-fonts">Десктопні додатки</div>
+              </div>
             </li>
             <li class="item">
+               <div class="imeges-thumb">
               <img
                 src="./imeges/displey.jpg"
                 alt="Мобільні додатки"
                 width="370"
               />
+              <div class="images-text img-fonts">Мобільні додатки</div>
+              </div>
             </li>
             <li class="item">
+               <div class="imeges-thumb">
               <img
                 src="./imeges/tablet.jpg"
                 alt="Розробка логотипів"
                 width="370"
               />
+              <div class="images-text img-fonts">Дизайнерські рішення</div>
+              </div>
             </li>
           </ul>
         </div>
@@ -383,10 +404,10 @@
     <footer class="footer">
       <div class="container footer-container">
         <div class="contackt-wrap">
-         <a class="footer-logo" href="#"
-          ><span class="color-blu">Web</span
-          ><span class="color-white">Studio</span></a
-        >
+          <a class="footer-logo" href="#"
+            ><span class="color-blu">Web</span
+            ><span class="color-white">Studio</span></a
+          >
           <address class="address">
             <ul class="list">
               <li>
@@ -406,45 +427,44 @@
               </li>
             </ul>
           </address>
-          </div>
-          <div class="social-wrap">
-            <p class="footer-title-social">приєднуйтесь</p>
-            <ul class="footer-social list">
-              <li class="footer-icon-social">
-                <a class="footer-icon-link" href="#"
-                  ><svg class="footer-social-icon">
-                    <use
-                      href="./imeges/symbol-defs.svg#icon-instagram2"
-                    ></use></svg
-                ></a>
-              </li>
-              <li class="footer-icon-social">
-                <a class="footer-icon-link" href="#"
-                  ><svg class="footer-social-icon">
-                    <use
-                      href="./imeges/symbol-defs.svg#icon-twitter2"
-                    ></use></svg
-                ></a>
-              </li>
-              <li class="footer-icon-social">
-                <a class="footer-icon-link" href="#"
-                  ><svg class="footer-social-icon">
-                    <use
-                      href="./imeges/symbol-defs.svg#icon-facebook2"
-                    ></use></svg
-                ></a>
-              </li>
-              <li class="footer-icon-social">
-                <a class="footer-icon-link" href="#"
-                  ><svg class="footer-social-icon">
-                    <use
-                      href="./imeges/symbol-defs.svg#icon-linkedin2"
-                    ></use></svg
-                ></a>
-              </li>
-            </ul>
-          </div>
+        </div>
+        <div class="social-wrap">
+          <p class="footer-title-social">приєднуйтесь</p>
+          <ul class="footer-social list">
+            <li class="footer-icon-social">
+              <a class="footer-icon-link" href="#"
+                ><svg class="footer-social-icon">
+                  <use
+                    href="./imeges/symbol-defs.svg#icon-instagram2"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="footer-icon-social">
+              <a class="footer-icon-link" href="#"
+                ><svg class="footer-social-icon">
+                  <use href="./imeges/symbol-defs.svg#icon-twitter2"></use></svg
+              ></a>
+            </li>
+            <li class="footer-icon-social">
+              <a class="footer-icon-link" href="#"
+                ><svg class="footer-social-icon">
+                  <use
+                    href="./imeges/symbol-defs.svg#icon-facebook2"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="footer-icon-social">
+              <a class="footer-icon-link" href="#"
+                ><svg class="footer-social-icon">
+                  <use
+                    href="./imeges/symbol-defs.svg#icon-linkedin2"
+                  ></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

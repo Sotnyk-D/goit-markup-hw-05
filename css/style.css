@@ -118,7 +118,7 @@ p {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
-
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -131,6 +131,18 @@ p {
 }
 .site-nav .current {
   color: var(--accent-color);
+}
+
+.link.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .cont-list {
@@ -238,6 +250,55 @@ p {
   padding: 10px 32px;
 }
 
+.backdrop-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.backdrop-hero.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.clouse-modal {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.clouse-modal:hover {
+  color: var(--accent-color);
+}
+
+.icon-close {
+}
+
 /* Feature */
 
 .feature-list {
@@ -296,6 +357,35 @@ p {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+
+.imeges-thumb {
+  position: relative;
+}
+
+.images-text {
+  position: absolute;
+  padding: 27px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.img-fonts {
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+
+  color: var(--pramery-white-color);
 }
 
 /* Team */
@@ -615,6 +705,10 @@ p {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.descript {
+  position: relative;
+}
+
 .card .img-project {
   display: block;
 }
@@ -644,3 +738,5 @@ p {
   font-size: 16px;
   line-height: 1.88;
 }
+
+
